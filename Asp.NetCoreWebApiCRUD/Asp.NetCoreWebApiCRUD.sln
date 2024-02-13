@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34408.163
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Asp.NetCoreWebApiCRUD", "Asp.NetCoreWebApiCRUD\Asp.NetCoreWebApiCRUD.csproj", "{E87050CC-DBE8-4D21-9D5F-D0D31C6C1F41}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BAL", "BAL\BAL.csproj", "{9A7687D6-595D-46ED-8E10-5A71DD828C73}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{CE62CDAE-A01E-41B0-A1AD-40225387A6FE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E87050CC-DBE8-4D21-9D5F-D0D31C6C1F41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E87050CC-DBE8-4D21-9D5F-D0D31C6C1F41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E87050CC-DBE8-4D21-9D5F-D0D31C6C1F41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E87050CC-DBE8-4D21-9D5F-D0D31C6C1F41}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A7687D6-595D-46ED-8E10-5A71DD828C73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A7687D6-595D-46ED-8E10-5A71DD828C73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A7687D6-595D-46ED-8E10-5A71DD828C73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A7687D6-595D-46ED-8E10-5A71DD828C73}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE62CDAE-A01E-41B0-A1AD-40225387A6FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE62CDAE-A01E-41B0-A1AD-40225387A6FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE62CDAE-A01E-41B0-A1AD-40225387A6FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE62CDAE-A01E-41B0-A1AD-40225387A6FE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5AFC1995-7483-4ACB-AE04-FDBA424D5E71}
+	EndGlobalSection
+EndGlobal

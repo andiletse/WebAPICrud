@@ -1,0 +1,17 @@
+C:\Users\znkul\source\repos\Asp.NetCoreWebApiCRUD\DAL\obj\Debug\net8.0\DAL.csproj.AssemblyReference.cache
+C:\Users\znkul\source\repos\Asp.NetCoreWebApiCRUD\DAL\obj\Debug\net8.0\DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\znkul\source\repos\Asp.NetCoreWebApiCRUD\DAL\obj\Debug\net8.0\DAL.AssemblyInfoInputs.cache
+C:\Users\znkul\source\repos\Asp.NetCoreWebApiCRUD\DAL\obj\Debug\net8.0\DAL.AssemblyInfo.cs
+C:\Users\znkul\source\repos\Asp.NetCoreWebApiCRUD\DAL\obj\Debug\net8.0\DAL.csproj.CoreCompileInputs.cache
+C:\Users\znkul\source\repos\Asp.NetCoreWebApiCRUD\DAL\bin\Debug\net8.0\DAL.deps.json
+C:\Users\znkul\source\repos\Asp.NetCoreWebApiCRUD\DAL\bin\Debug\net8.0\DAL.dll
+C:\Users\znkul\source\repos\Asp.NetCoreWebApiCRUD\DAL\bin\Debug\net8.0\DAL.pdb
+C:\Users\znkul\source\repos\Asp.NetCoreWebApiCRUD\DAL\bin\Debug\net8.0\BAL.dll
+C:\Users\znkul\source\repos\Asp.NetCoreWebApiCRUD\DAL\bin\Debug\net8.0\BAL.pdb
+C:\Users\znkul\source\repos\Asp.NetCoreWebApiCRUD\DAL\obj\Debug\net8.0\DAL.csproj.CopyComplete
+C:\Users\znkul\source\repos\Asp.NetCoreWebApiCRUD\DAL\obj\Debug\net8.0\DAL.dll
+C:\Users\znkul\source\repos\Asp.NetCoreWebApiCRUD\DAL\obj\Debug\net8.0\refint\DAL.dll
+C:\Users\znkul\source\repos\Asp.NetCoreWebApiCRUD\DAL\obj\Debug\net8.0\DAL.pdb
+C:\Users\znkul\source\repos\Asp.NetCoreWebApiCRUD\DAL\obj\Debug\net8.0\ref\DAL.dll
+C:\Users\znkul\source\repos\Asp.NetCoreWebApiCRUD\DAL\bin\Debug\net8.0\DAL.runtimeconfig.json
+C:\Users\znkul\source\repos\Asp.NetCoreWebApiCRUD\DAL\obj\Debug\net8.0\DAL.genruntimeconfig.cache
