@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace BAL.Responses
 {
-    internal class CreatePersonResponse
+    public class CreatePersonResponse
     {
+        public string message { get; }
+
     }
 }

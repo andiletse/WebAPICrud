@@ -17,7 +17,7 @@ using System.Runtime.CompilerServices;
 namespace DAL.Repository
 {
    
-    public class RepositoryPerson : IPersonsRepository<Person>
+    public class RepositoryPerson : IPersonsRepository
     {
         private readonly PersonDbContext _sqlHelper;
         private readonly IMapper _mapper;
