@@ -39,6 +39,7 @@ namespace Asp.NetCoreWebApiCRUD
             services.AddControllers();
             services.AddHttpClient();
             AutoMapperService(services);
+            DatabaseConnectionServices(services);
             UseCaseServices(services);
             RepositoryServices(services);            
             
@@ -57,11 +58,12 @@ namespace Asp.NetCoreWebApiCRUD
             services.AddAutoMapper(c => c.AddProfile<MappingProfiles>(), typeof(Startup));
         }
 
-        //private void DatabaseConnectionServices(IServiceCollection services)
-        //{
-        //    var connectionString = new PersonDbContext(_config.GetConnectionString("PersonDbConnectionString"));
-        //    services.AddSingleton(connectionString);
-        //}
+        private void DatabaseConnectionServices(IServiceCollection services)
+        {
+            PersonDbContext personDbContext =new PersonDbContext();
+            var connectionString = personDbContext.Connect();
+            services.AddSingleton(connectionString);
+        }
 
         private void RepositoryServices(IServiceCollection services)
         {
