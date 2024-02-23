@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\znkul\\source\\repos\\Asp.NetCoreWebApiCRUD\\BAL\\BAL.csproj": {}
+    "C:\\Users\\znkul\\source\\repos\\WebAPICrud\\Asp.NetCoreWebApiCRUD\\BAL\\BAL.csproj": {}
   },
   "projects": {
-    "C:\\Users\\znkul\\source\\repos\\Asp.NetCoreWebApiCRUD\\BAL\\BAL.csproj": {
+    "C:\\Users\\znkul\\source\\repos\\WebAPICrud\\Asp.NetCoreWebApiCRUD\\BAL\\BAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\znkul\\source\\repos\\Asp.NetCoreWebApiCRUD\\BAL\\BAL.csproj",
+        "projectUniqueName": "C:\\Users\\znkul\\source\\repos\\WebAPICrud\\Asp.NetCoreWebApiCRUD\\BAL\\BAL.csproj",
         "projectName": "BAL",
-        "projectPath": "C:\\Users\\znkul\\source\\repos\\Asp.NetCoreWebApiCRUD\\BAL\\BAL.csproj",
+        "projectPath": "C:\\Users\\znkul\\source\\repos\\WebAPICrud\\Asp.NetCoreWebApiCRUD\\BAL\\BAL.csproj",
         "packagesPath": "C:\\Users\\znkul\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\znkul\\source\\repos\\Asp.NetCoreWebApiCRUD\\BAL\\obj\\",
+        "outputPath": "C:\\Users\\znkul\\source\\repos\\WebAPICrud\\Asp.NetCoreWebApiCRUD\\BAL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

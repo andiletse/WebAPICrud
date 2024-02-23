@@ -4680,11 +4680,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\znkul\\source\\repos\\Asp.NetCoreWebApiCRUD\\Asp.NetCoreWebApiCRUD\\Asp.NetCoreWebApiCRUD.csproj",
+      "projectUniqueName": "C:\\Users\\znkul\\source\\repos\\WebAPICrud\\Asp.NetCoreWebApiCRUD\\Asp.NetCoreWebApiCRUD\\Asp.NetCoreWebApiCRUD.csproj",
       "projectName": "Asp.NetCoreWebApiCRUD",
-      "projectPath": "C:\\Users\\znkul\\source\\repos\\Asp.NetCoreWebApiCRUD\\Asp.NetCoreWebApiCRUD\\Asp.NetCoreWebApiCRUD.csproj",
+      "projectPath": "C:\\Users\\znkul\\source\\repos\\WebAPICrud\\Asp.NetCoreWebApiCRUD\\Asp.NetCoreWebApiCRUD\\Asp.NetCoreWebApiCRUD.csproj",
       "packagesPath": "C:\\Users\\znkul\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\znkul\\source\\repos\\Asp.NetCoreWebApiCRUD\\Asp.NetCoreWebApiCRUD\\obj\\",
+      "outputPath": "C:\\Users\\znkul\\source\\repos\\WebAPICrud\\Asp.NetCoreWebApiCRUD\\Asp.NetCoreWebApiCRUD\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -4706,11 +4706,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\znkul\\source\\repos\\Asp.NetCoreWebApiCRUD\\BAL\\BAL.csproj": {
-              "projectPath": "C:\\Users\\znkul\\source\\repos\\Asp.NetCoreWebApiCRUD\\BAL\\BAL.csproj"
+            "C:\\Users\\znkul\\source\\repos\\WebAPICrud\\Asp.NetCoreWebApiCRUD\\BAL\\BAL.csproj": {
+              "projectPath": "C:\\Users\\znkul\\source\\repos\\WebAPICrud\\Asp.NetCoreWebApiCRUD\\BAL\\BAL.csproj"
             },
-            "C:\\Users\\znkul\\source\\repos\\Asp.NetCoreWebApiCRUD\\DAL\\DAL.csproj": {
-              "projectPath": "C:\\Users\\znkul\\source\\repos\\Asp.NetCoreWebApiCRUD\\DAL\\DAL.csproj"
+            "C:\\Users\\znkul\\source\\repos\\WebAPICrud\\Asp.NetCoreWebApiCRUD\\DAL\\DAL.csproj": {
+              "projectPath": "C:\\Users\\znkul\\source\\repos\\WebAPICrud\\Asp.NetCoreWebApiCRUD\\DAL\\DAL.csproj"
             }
           }
         }
@@ -4776,13 +4776,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1900",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Error occurred while getting package vulnerability data: An error occurred while sending the request."
-    }
-  ]
+  }
 }

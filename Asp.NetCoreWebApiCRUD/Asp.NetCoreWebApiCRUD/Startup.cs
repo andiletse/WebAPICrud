@@ -19,6 +19,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
+using BAL.Interfaces;
+using BAL.UseCases;
 
 namespace Asp.NetCoreWebApiCRUD
 {
@@ -36,10 +38,12 @@ namespace Asp.NetCoreWebApiCRUD
             services.AddDbContext<PersonDbContext>();
             services.AddControllers();
             services.AddHttpClient();
+            AutoMapperService(services);
+            UseCaseServices(services);
+            RepositoryServices(services);            
+            
             //services.AddTransient<IPersonsRepository<Person>, RepositoryPerson>();
             // DatabaseConnectionServices(services);
-            RepositoryServices(services);
-            AutoMapperService(services);
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo
@@ -61,7 +65,12 @@ namespace Asp.NetCoreWebApiCRUD
 
         private void RepositoryServices(IServiceCollection services)
         {
-            services.AddTransient<IPersonsRepository<Person>, RepositoryPerson>();
+            services.AddTransient<IPersonsRepository, RepositoryPerson>();
+        }
+        private void UseCaseServices(IServiceCollection services)
+        {
+            services.AddTransient<ICreatePersonUseCase, CreatePersonUseCase>();
+
         }
 
         //

@@ -5,6 +5,7 @@ using BAL.Responses;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 namespace Asp.NetCoreWebApiCRUD.Controllers
 {
@@ -21,11 +22,13 @@ namespace Asp.NetCoreWebApiCRUD.Controllers
         }
 
         [HttpPost]
-        public IActionResult Create(CreatePersonRequest Request)
+        public string Create(CreatePersonRequest Request)
         {
             _createPersonUseCase.Execute(Request);
-          
+            return class1.message;
+
             
+
         }
     }
 }

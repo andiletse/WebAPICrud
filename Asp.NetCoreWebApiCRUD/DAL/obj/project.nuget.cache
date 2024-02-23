@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "l6GeyOaCuhx4iV+6PkDdFusb+cDl/l7UrGt/tL94qrnjUzQIvPZosi5Va3dFkZhf5Fovf8ADA3rQuCATFADniQ==",
+  "dgSpecHash": "XlHewVNcbtRY/zLaRpW1YF81R0zI8raIzR5RKF0k8WJzNzHf94oROt5+zE5WkoXzACdzx8Yi47q2hQ0mniAKxg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\znkul\\source\\repos\\Asp.NetCoreWebApiCRUD\\DAL\\DAL.csproj",
+  "projectFilePath": "C:\\Users\\znkul\\source\\repos\\WebAPICrud\\Asp.NetCoreWebApiCRUD\\DAL\\DAL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\znkul\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\znkul\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
@@ -87,12 +87,5 @@
     "C:\\Users\\znkul\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
     "C:\\Users\\znkul\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1900",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Error occurred while getting package vulnerability data: An error occurred while sending the request."
-    }
-  ]
+  "logs": []
 }

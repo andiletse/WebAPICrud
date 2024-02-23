@@ -19,11 +19,10 @@ namespace BAL.UseCases
         {
             var person = new Person
             {
-                UserName = request.person.UserName,
-                UserEmail = request.person.UserEmail,
-                UserPassword = request.person.UserPassword,
-                CreatedOn = DateTime.Now,
-                IsDeleted = request.person.IsDeleted
+                UserName = request.UserName,
+                UserEmail = request.UserEmail,
+                UserPassword = request.UserPassword,
+                CreatedOn = DateTime.Now
             };
              _personsRepository.Create(person);
         }
