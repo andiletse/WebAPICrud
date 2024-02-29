@@ -21,6 +21,7 @@ using System.Threading.Tasks;
 using AutoMapper;
 using BAL.Interfaces;
 using BAL.UseCases;
+using Microsoft.AspNetCore.Mvc.Routing;
 
 namespace Asp.NetCoreWebApiCRUD
 {
@@ -35,7 +36,7 @@ namespace Asp.NetCoreWebApiCRUD
         //this method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<PersonDbContext>();
+           // services.AddDbContext<PersonDbContext>();
             services.AddControllers();
             services.AddHttpClient();
             AutoMapperService(services);
@@ -60,15 +61,14 @@ namespace Asp.NetCoreWebApiCRUD
 
         private void DatabaseConnectionServices(IServiceCollection services)
         {
-            PersonDbContext personDbContext =new PersonDbContext();
-            var connectionString = personDbContext.Connect();
-            services.AddSingleton(connectionString);
+            var connectionString = new ConnSqlHelper(_config.GetConnectionString("PersonDbConnectionString"));
         }
 
         private void RepositoryServices(IServiceCollection services)
         {
             services.AddTransient<IPersonsRepository, RepositoryPerson>();
         }
+
         private void UseCaseServices(IServiceCollection services)
         {
             services.AddTransient<ICreatePersonUseCase, CreatePersonUseCase>();

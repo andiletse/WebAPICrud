@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Asp.NetCoreWebApiCRUD.props" />
+</Project>

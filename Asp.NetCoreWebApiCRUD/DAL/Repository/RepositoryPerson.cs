@@ -19,9 +19,9 @@ namespace DAL.Repository
    
     public class RepositoryPerson : IPersonsRepository
     {
-        private readonly PersonDbContext _sqlHelper;
+        private readonly ConnSqlHelper _sqlHelper;
         private readonly IMapper _mapper;
-        public RepositoryPerson(PersonDbContext sqlHelper, IMapper mapper)
+        public RepositoryPerson(ConnSqlHelper sqlHelper, IMapper mapper)
         {
             _sqlHelper = sqlHelper ?? throw new ArgumentNullException(nameof(sqlHelper));
             _mapper= mapper ?? throw new ArgumentNullException(nameof(mapper));
@@ -34,7 +34,7 @@ namespace DAL.Repository
                        values(@Id,@UserName,@UserEmail,UserPassword,@IsDeleted,@CreatedOn)";
             #endregion
             #region Execution
-            var connectionString = new SqlConnection(_sqlHelper.Connect());
+            var connectionString = new SqlConnection(_sqlHelper.ConnectionString);
             connectionString.Execute(sql, new { _object });
             #endregion
 
@@ -46,7 +46,7 @@ namespace DAL.Repository
             var sql = @"select * from Persons where Id = @Id";
             #endregion
             #region Execution
-            using var connectionString = new SqlConnection(_sqlHelper.Connect());
+            using var connectionString = new SqlConnection(_sqlHelper.ConnectionString);
             var ofPersonsThatAreFoundWithIdProvided = connectionString.Query<Persons>(sql, new { Id = Id }).FirstOrDefault();
             #endregion
             return _mapper.Map<Person>(ofPersonsThatAreFoundWithIdProvided);
@@ -59,7 +59,7 @@ namespace DAL.Repository
                         where Id = @Id and UserName = @UserName";
             #endregion
             #region Execution
-            using var connection = new SqlConnection(_sqlHelper.Connect());
+            using var connection = new SqlConnection(_sqlHelper.ConnectionString);
             connection.Execute(sql, new
             {
                 Id = _object.Id,
