@@ -62,6 +62,7 @@ namespace Asp.NetCoreWebApiCRUD
         private void DatabaseConnectionServices(IServiceCollection services)
         {
             var connectionString = new ConnSqlHelper(_config.GetConnectionString("PersonDbConnectionString"));
+            services.AddSingleton(connectionString);
         }
 
         private void RepositoryServices(IServiceCollection services)

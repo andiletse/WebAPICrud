@@ -5,7 +5,7 @@ namespace DAL.Helpers
     {
         public ConnSqlHelper(string connectionString)
         {
-            connectionString = connectionString;
+            ConnectionString = connectionString;
         }
         public string ConnectionString { get; }
     }

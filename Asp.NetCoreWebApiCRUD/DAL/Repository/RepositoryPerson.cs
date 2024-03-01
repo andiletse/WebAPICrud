@@ -29,13 +29,21 @@ namespace DAL.Repository
         public void Create(Person _object)
         {
             #region SQL 
-            var sql = @"insert into Persons(Id, UserName, UserEmail, UserPassword,IsDeleted,
+            var sql = @"insert into Persons(UserName, UserEmail, UserPassword,IsDeleted,
                         CreatedOn) 
-                       values(@Id,@UserName,@UserEmail,UserPassword,@IsDeleted,@CreatedOn)";
+                       values(@UserName,@UserEmail,@UserPassword,@IsDeleted,@CreatedOn)";
             #endregion
             #region Execution
             var connectionString = new SqlConnection(_sqlHelper.ConnectionString);
-            connectionString.Execute(sql, new { _object });
+            connectionString.ExecuteScalar(sql,
+               param: new{
+                  // Id = _object.Id,
+                   UserName=_object.UserName,
+                   UserEmail=_object.UserEmail,
+                   UserPassword= _object.UserPassword,
+                   IsDeleted= _object.IsDeleted,
+                   CreatedOn= _object.CreatedOn
+                });
             #endregion
 
         }
@@ -47,7 +55,10 @@ namespace DAL.Repository
             #endregion
             #region Execution
             using var connectionString = new SqlConnection(_sqlHelper.ConnectionString);
-            var ofPersonsThatAreFoundWithIdProvided = connectionString.Query<Persons>(sql, new { Id = Id }).FirstOrDefault();
+            var ofPersonsThatAreFoundWithIdProvided = connectionString.Query<Persons>(sql, new
+            {
+                Id = Id
+            }).FirstOrDefault();
             #endregion
             return _mapper.Map<Person>(ofPersonsThatAreFoundWithIdProvided);
 
