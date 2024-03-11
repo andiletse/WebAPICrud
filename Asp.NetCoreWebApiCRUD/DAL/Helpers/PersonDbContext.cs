@@ -14,18 +14,19 @@ namespace DAL.Helpers
         {
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {           
-            if (!optionsBuilder.IsConfigured)
+        {
+            if (optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer(@"PersonDbConnectionString");
+
+                optionsBuilder.UseSqlServer("PersonDbConnectionString");
             }
-            base.OnConfiguring(optionsBuilder);           
+            base.OnConfiguring(optionsBuilder);
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
         }
-      
+
         //adding domain classes as dbset properties.
         public DbSet<Person> Persons { get; set; }
     }

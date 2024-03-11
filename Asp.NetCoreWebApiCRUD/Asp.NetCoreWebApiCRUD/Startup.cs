@@ -36,16 +36,14 @@ namespace Asp.NetCoreWebApiCRUD
         //this method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-           // services.AddDbContext<PersonDbContext>();
             services.AddControllers();
+            services.AddDbContext<PersonDbContext>();
+            services.AddSingleton<ConnSqlHelper>();
             services.AddHttpClient();
             AutoMapperService(services);
-            DatabaseConnectionServices(services);
+           // DatabaseConnectionServices(services);
             UseCaseServices(services);
-            RepositoryServices(services);            
-            
-            //services.AddTransient<IPersonsRepository<Person>, RepositoryPerson>();
-            // DatabaseConnectionServices(services);
+            RepositoryServices(services);
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo
@@ -59,11 +57,11 @@ namespace Asp.NetCoreWebApiCRUD
             services.AddAutoMapper(c => c.AddProfile<MappingProfiles>(), typeof(Startup));
         }
 
-        private void DatabaseConnectionServices(IServiceCollection services)
-        {
-            var connectionString = new ConnSqlHelper(_config.GetConnectionString("PersonDbConnectionString"));
-            services.AddSingleton(connectionString);
-        }
+        //private void DatabaseConnectionServices(IServiceCollection services)
+        //{
+        //   var connectionString = new ConnSqlHelper(_config.GetConnectionString("PersonDbConnectionString"));
+        //    services.AddSingleton(connectionString);
+        //}
 
         private void RepositoryServices(IServiceCollection services)
         {
