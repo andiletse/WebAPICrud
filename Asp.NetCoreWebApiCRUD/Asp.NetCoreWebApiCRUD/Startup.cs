@@ -37,11 +37,15 @@ namespace Asp.NetCoreWebApiCRUD
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            services.AddDbContext<PersonDbContext>();
-            services.AddSingleton<ConnSqlHelper>();
+            services.AddDbContext<PersonDbContext>((serviceProvider,options) =>
+            {
+                options.UseSqlServer(_config.GetConnectionString("PersonDbConnectionString"));
+                options.UseInternalServiceProvider(serviceProvider);
+            });
             services.AddHttpClient();
-            AutoMapperService(services);
-           // DatabaseConnectionServices(services);
+           // AutoMapperService(services);
+            services.AddAutoMapper(typeof(Startup));
+            // DatabaseConnectionServices(services);
             UseCaseServices(services);
             RepositoryServices(services);
             services.AddSwaggerGen(c =>
@@ -51,11 +55,11 @@ namespace Asp.NetCoreWebApiCRUD
             });
         }
 
-        private void AutoMapperService(IServiceCollection services)
-        {
-            services.AddAutoMapper(typeof(Startup));
-            services.AddAutoMapper(c => c.AddProfile<MappingProfiles>(), typeof(Startup));
-        }
+        //private void AutoMapperService(IServiceCollection services)
+        //{
+        //    services.AddAutoMapper(typeof(Startup));
+        //    services.AddAutoMapper(c => c.AddProfile<MappingProfiles>(), typeof(Startup));
+       // }
 
         //private void DatabaseConnectionServices(IServiceCollection services)
         //{
@@ -65,7 +69,7 @@ namespace Asp.NetCoreWebApiCRUD
 
         private void RepositoryServices(IServiceCollection services)
         {
-            services.AddTransient<IPersonsRepository, RepositoryPerson>();
+            services.AddScoped<IPersonsRepository, RepositoryPerson>();
         }
 
         private void UseCaseServices(IServiceCollection services)

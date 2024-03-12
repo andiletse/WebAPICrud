@@ -17,95 +17,37 @@ using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 
 namespace DAL.Repository
 {
-   
+
     public class RepositoryPerson : IPersonsRepository
     {
-        private readonly ConnSqlHelper _sqlHelper;
         private readonly IMapper _mapper;
-        public RepositoryPerson(ConnSqlHelper sqlHelper, IMapper mapper, PersonDbContext context)
+        private readonly PersonDbContext _context;
+        
+        public RepositoryPerson(IMapper mapper, PersonDbContext context)
         {
-            _sqlHelper = sqlHelper ?? throw new ArgumentNullException(nameof(sqlHelper));
             _mapper = mapper ?? throw new ArgumentNullException(nameof(mapper));
+            _context = context ?? throw new ArgumentNullException(nameof(context));
+
         }
         public void Create(Person _object)
         {
-            #region SQL 
-            var sql = @"insert into Persons(UserName, UserEmail, UserPassword,IsDeleted,
-                        CreatedOn) 
-                       values(@UserName,@UserEmail,@UserPassword,@IsDeleted,@CreatedOn)";
-            #endregion
-            #region Execution
-            // Access the connection string from the DbContext's Database property
-
-            string ConnectionString = _sqlHelper.GetConnectionStringFromDbContext();
-
-            // Create a new connection using the obtained connection string
-
-            using (var connection = new SqlConnection(ConnectionString))
-            {
-                connection.Open();
-                connection.ExecuteScalar(sql,
-                  param: new
-                  {
-                      // Id = _object.Id,
-                      UserName = _object.UserName,
-                      UserEmail = _object.UserEmail,
-                      UserPassword = _object.UserPassword,
-                      IsDeleted = _object.IsDeleted,
-                      CreatedOn = _object.CreatedOn
-                  });
-            }
+            var personEntity=_mapper.Map<PersonEntity>(_object);
+            _context.Persons.Add(personEntity);
+            _context.SaveChanges();
            
-            #endregion
-
         }
-
+        
         public Person GetById(int Id)
         {
-            #region SQL
-            var sql = @"select * from Persons where Id = @Id";
-            #endregion
-            #region Execution
-            // Access the connection string from the DbContext's Database property
-            string ConnectionString = _sqlHelper.GetConnectionStringFromDbContext();
-
-            // Create a new connection using the obtained connection string
-            using (var connection = new SqlConnection(ConnectionString))
-            {
-                connection.Open();
-                var ofPersonsThatAreFoundWithIdProvided = connection.Query<Persons>(sql, new
-                {
-                    Id = Id
-                }).FirstOrDefault();
-                #endregion
-                return _mapper.Map<Person>(ofPersonsThatAreFoundWithIdProvided);
-            }               
+            // Execute the query using Entity Framework Core
+            var ofPersonsThatAreFoundWithIdProvided = _context.Persons.FirstOrDefault(p => p.Id == Id);
+            return _mapper.Map<Person>(ofPersonsThatAreFoundWithIdProvided);
+           
         }
-
-        public void Delete(Person _object)
-        {
-            #region SQL
-            var sql = @"delete from Persons
-                        where Id = @Id and UserName = @UserName";
-            #endregion
-            #region Execution
-            // Access the connection string from the DbContext's Database property
-            string ConnectionString = _sqlHelper.GetConnectionStringFromDbContext();
-
-            // Create a new connection using the obtained connection string
-            using (var connection = new SqlConnection(ConnectionString))
-            {
-                connection.Open();
-                connection.Execute(sql, new
-                {
-                    Id = _object.Id,
-                    Username = _object.UserName
-                });
-            }
-
-            
-            #endregion
-        }
+        //public void Delete(Person _object)
+        //{
+         
+        //}
         //public IEnumerable<Person> GetAll()
         //{
         //}

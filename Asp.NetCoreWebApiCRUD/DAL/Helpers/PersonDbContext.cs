@@ -8,17 +8,18 @@ namespace DAL.Helpers
    
     public sealed class PersonDbContext : DbContext
     {
+        private readonly IConfiguration _configuration;
         public PersonDbContext() { }
-        public PersonDbContext(DbContextOptions<PersonDbContext> options)
+        public PersonDbContext(DbContextOptions<PersonDbContext> options, IConfiguration configuration)
             : base(options)
         {
+            _configuration = configuration;
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            if (optionsBuilder.IsConfigured)
+            if (!optionsBuilder.IsConfigured)
             {
-
-                optionsBuilder.UseSqlServer("PersonDbConnectionString");
+                optionsBuilder.UseSqlServer(_configuration.GetConnectionString("PersonDbConnectionString"));
             }
             base.OnConfiguring(optionsBuilder);
         }
