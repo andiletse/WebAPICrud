@@ -24,7 +24,7 @@ namespace DAL.Repository
         public void Create(Person _object)
         {
              var personEntity = _mapper.Map<PersonEntity>(_object);
-            _context.Persons.Add(PersonEntity);
+            _context.Persons.Add(personEntity);
             _context.SaveChanges();
            
         }
