@@ -1,7 +1,7 @@
-﻿using System;
-
+﻿
 namespace BAL.Domain
 {
+    //domain class its mapped with personEntity class
     public class Person
     {
         public int Id { get; set; }

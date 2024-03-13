@@ -1,6 +1,7 @@
-﻿using System;
+﻿
 namespace DAL.Entities
 {
+    //mapped with person domain class
     public class PersonEntity
     {
         public int Id { get; set; }

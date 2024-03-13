@@ -1,27 +1,11 @@
 ﻿using DAL.Repository;
-using DAL.Entities;
 using DAL.Mapping;
 using DAL.Helpers;
-using BAL.Domain;
 using BAL.Gateways.IRepository;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using AutoMapper;
 using BAL.Interfaces;
 using BAL.UseCases;
-using Microsoft.AspNetCore.Mvc.Routing;
 
 namespace Asp.NetCoreWebApiCRUD
 {
@@ -42,10 +26,8 @@ namespace Asp.NetCoreWebApiCRUD
                 options.UseSqlServer(_config.GetConnectionString("PersonDbConnectionString"));
                 options.UseInternalServiceProvider(serviceProvider);
             });
-            services.AddHttpClient();
-           // AutoMapperService(services);
-            services.AddAutoMapper(typeof(Startup));
-            // DatabaseConnectionServices(services);
+            services.AddHttpClient();           
+            AutoMapperService(services);           
             UseCaseServices(services);
             RepositoryServices(services);
             services.AddSwaggerGen(c =>
@@ -55,17 +37,11 @@ namespace Asp.NetCoreWebApiCRUD
             });
         }
 
-        //private void AutoMapperService(IServiceCollection services)
-        //{
-        //    services.AddAutoMapper(typeof(Startup));
-        //    services.AddAutoMapper(c => c.AddProfile<MappingProfiles>(), typeof(Startup));
-       // }
-
-        //private void DatabaseConnectionServices(IServiceCollection services)
-        //{
-        //   var connectionString = new ConnSqlHelper(_config.GetConnectionString("PersonDbConnectionString"));
-        //    services.AddSingleton(connectionString);
-        //}
+        private void AutoMapperService(IServiceCollection services)
+        {
+            services.AddAutoMapper(typeof(Startup));
+            services.AddAutoMapper(c => c.AddProfile<MappingProfiles>(), typeof(Startup));
+        }
 
         private void RepositoryServices(IServiceCollection services)
         {

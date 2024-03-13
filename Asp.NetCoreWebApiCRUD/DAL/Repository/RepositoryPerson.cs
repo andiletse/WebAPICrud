@@ -1,17 +1,8 @@
-﻿using System;
-using DAL.Helpers;
+﻿using DAL.Helpers;
 using DAL.Entities;
 using BAL.Domain;
 using BAL.Gateways.IRepository;
-using System.Collections.Generic;
-using System.Linq;
-using Microsoft.Data.SqlClient;
-using Microsoft.EntityFrameworkCore;
-using Dapper;
 using AutoMapper;
-using Microsoft.EntityFrameworkCore.Internal;
-using System.Reflection;
-using System.Runtime.CompilerServices;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 
 
@@ -29,13 +20,16 @@ namespace DAL.Repository
             _context = context ?? throw new ArgumentNullException(nameof(context));
 
         }
+        
         public void Create(Person _object)
         {
-            var personEntity=_mapper.Map<PersonEntity>(_object);
-            _context.Persons.Add(personEntity);
+             var personEntity = _mapper.Map<PersonEntity>(_object);
+            _context.Persons.Add(PersonEntity);
             _context.SaveChanges();
            
         }
+
+
         
         public Person GetById(int Id)
         {
