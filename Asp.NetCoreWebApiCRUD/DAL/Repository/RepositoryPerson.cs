@@ -4,6 +4,10 @@ using BAL.Domain;
 using BAL.Gateways.IRepository;
 using AutoMapper;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
+using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Internal;
+using Microsoft.EntityFrameworkCore.Metadata.Conventions;
+using Microsoft.AspNetCore.Authentication;
 
 
 namespace DAL.Repository
@@ -23,10 +27,10 @@ namespace DAL.Repository
         
         public void Create(Person _object)
         {
-             var personEntity = _mapper.Map<PersonEntity>(_object);
+            var personEntity = _mapper.Map<PersonEntity>(_object);
+            
             _context.Persons.Add(personEntity);
-            _context.SaveChanges();
-           
+            _context.SaveChanges();           
         }
 
 

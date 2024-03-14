@@ -1,4 +1,4 @@
-﻿using BAL.Domain;
+﻿using DAL.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using System.Runtime.CompilerServices;
@@ -29,6 +29,6 @@ namespace DAL.Helpers
         }
 
         //adding domain classes as dbset properties.
-        public DbSet<Person> Persons { get; set; }
+        public DbSet<PersonEntity> Persons { get; set; }
     }
 }

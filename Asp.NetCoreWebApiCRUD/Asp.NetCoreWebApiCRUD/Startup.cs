@@ -21,11 +21,7 @@ namespace Asp.NetCoreWebApiCRUD
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            services.AddDbContext<PersonDbContext>((serviceProvider,options) =>
-            {
-                options.UseSqlServer(_config.GetConnectionString("PersonDbConnectionString"));
-                options.UseInternalServiceProvider(serviceProvider);
-            });
+            services.AddDbContext<PersonDbContext>();
             services.AddHttpClient();           
             AutoMapperService(services);           
             UseCaseServices(services);

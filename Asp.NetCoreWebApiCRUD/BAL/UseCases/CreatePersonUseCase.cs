@@ -19,6 +19,7 @@ namespace BAL.UseCases
         {
             var person = new Person
             {
+                
                 UserName = request.UserName,
                 UserEmail = request.UserEmail,
                 UserPassword = request.UserPassword,
