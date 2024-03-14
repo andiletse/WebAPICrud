@@ -4,7 +4,7 @@ namespace DAL
 {
     public class Class1
     {
-        PersonDbContext c = new PersonDbContext();
+        System1DbContext c = new System1DbContext();
 
         
     }

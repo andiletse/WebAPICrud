@@ -876,7 +876,6 @@ C:\Users\znkul\source\repos\WebAPICrud\Asp.NetCoreWebApiCRUD\Asp.NetCoreWebApiCR
 C:\Users\znkul\source\repos\WebAPICrud\Asp.NetCoreWebApiCRUD\Asp.NetCoreWebApiCRUD\obj\Debug\net8.0\Asp.NetCoreWebApiCRUD.AssemblyInfoInputs.cache
 C:\Users\znkul\source\repos\WebAPICrud\Asp.NetCoreWebApiCRUD\Asp.NetCoreWebApiCRUD\obj\Debug\net8.0\Asp.NetCoreWebApiCRUD.AssemblyInfo.cs
 C:\Users\znkul\source\repos\WebAPICrud\Asp.NetCoreWebApiCRUD\Asp.NetCoreWebApiCRUD\obj\Debug\net8.0\Asp.NetCoreWebApiCRUD.csproj.CoreCompileInputs.cache
-C:\Users\znkul\source\repos\WebAPICrud\Asp.NetCoreWebApiCRUD\Asp.NetCoreWebApiCRUD\obj\Debug\net8.0\Asp.NetCoreWebApiCRUD.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\znkul\source\repos\WebAPICrud\Asp.NetCoreWebApiCRUD\Asp.NetCoreWebApiCRUD\obj\Debug\net8.0\Asp.NetCoreWebApiCRUD.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\znkul\source\repos\WebAPICrud\Asp.NetCoreWebApiCRUD\Asp.NetCoreWebApiCRUD\obj\Debug\net8.0\Asp.NetCoreWebApiCRUD.sourcelink.json
 C:\Users\znkul\source\repos\WebAPICrud\Asp.NetCoreWebApiCRUD\Asp.NetCoreWebApiCRUD\obj\Debug\net8.0\staticwebassets.build.json

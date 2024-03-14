@@ -10,8 +10,8 @@ namespace DAL.Mapping
     {
         public MappingProfiles()
         {
-            CreateMap<PersonEntity, Person>();
-            CreateMap<Person, PersonEntity>();
+            CreateMap<System1_EntityName1, System1_ObjectName>();
+            CreateMap<System1_ObjectName, System1_EntityName1>();
         }
     }
 }

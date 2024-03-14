@@ -21,7 +21,7 @@ namespace Asp.NetCoreWebApiCRUD
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            services.AddDbContext<PersonDbContext>();
+            services.AddDbContext<System1DbContext>();
             services.AddHttpClient();           
             AutoMapperService(services);           
             UseCaseServices(services);
@@ -41,12 +41,12 @@ namespace Asp.NetCoreWebApiCRUD
 
         private void RepositoryServices(IServiceCollection services)
         {
-            services.AddScoped<IPersonsRepository, RepositoryPerson>();
+            services.AddScoped<ISystem1_ObjectName_Repository, RepositorySystem1_ObjectName_>();
         }
 
         private void UseCaseServices(IServiceCollection services)
         {
-            services.AddTransient<ICreatePersonUseCase, CreatePersonUseCase>();
+            services.AddTransient<ICreateSytem1_ObjectName_UseCase, CreateSystem1_ObjectName_UseCase>();
 
         }
 
