@@ -892,3 +892,4 @@ C:\Users\znkul\source\repos\WebAPICrud\Asp.NetCoreWebApiCRUD\Asp.NetCoreWebApiCR
 C:\Users\znkul\source\repos\WebAPICrud\Asp.NetCoreWebApiCRUD\Asp.NetCoreWebApiCRUD\obj\Debug\net8.0\Asp.NetCoreWebApiCRUD.pdb
 C:\Users\znkul\source\repos\WebAPICrud\Asp.NetCoreWebApiCRUD\Asp.NetCoreWebApiCRUD\obj\Debug\net8.0\Asp.NetCoreWebApiCRUD.genruntimeconfig.cache
 C:\Users\znkul\source\repos\WebAPICrud\Asp.NetCoreWebApiCRUD\Asp.NetCoreWebApiCRUD\obj\Debug\net8.0\ref\Asp.NetCoreWebApiCRUD.dll
+C:\Users\znkul\source\repos\WebAPICrud\Asp.NetCoreWebApiCRUD\Asp.NetCoreWebApiCRUD\obj\Debug\net8.0\Asp.NetCoreWebApiCRUD.MvcApplicationPartsAssemblyInfo.cs

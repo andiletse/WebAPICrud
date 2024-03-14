@@ -4,6 +4,6 @@ namespace BAL
 {
     public class Class1
     {
-       public string message="";
+       public string message="Hooray";
     }
 }

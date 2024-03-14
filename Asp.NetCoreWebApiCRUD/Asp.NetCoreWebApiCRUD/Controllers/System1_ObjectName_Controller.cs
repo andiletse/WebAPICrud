@@ -14,21 +14,30 @@ namespace Asp.NetCoreWebApiCRUD.Controllers
     public class System1_ObjectName_Controller : ControllerBase
     {
         private readonly Class1 class1 = new Class1();
-        private readonly ICreateSytem1_ObjectName_UseCase _createPersonUseCase;
+        private readonly ICreateSytem1_ObjectName_UseCase _createSystem1_ObjectName1_UseCase;
 
-        public System1_ObjectName_Controller(ICreateSytem1_ObjectName_UseCase createPersonUseCase)
+        public System1_ObjectName_Controller(ICreateSytem1_ObjectName_UseCase createSystem1_ObjectName1_UseCase)
         {
-            _createPersonUseCase = createPersonUseCase ?? throw new ArgumentNullException(nameof(createPersonUseCase));
+            _createSystem1_ObjectName1_UseCase = _createSystem1_ObjectName1_UseCase ?? throw new ArgumentNullException(nameof(createSystem1_ObjectName1_UseCase));
         }
 
         [HttpPost]
-        public string Create(CreateSytem1_ObjectName_Request Request)
+        public IActionResult Create([FromBody] CreateSytem1_ObjectName_Request Request)
         {
-            _createPersonUseCase.Execute(Request);
-            return class1.message;
-
-            
-
+            if(!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+            try
+            {
+                _createSystem1_ObjectName1_UseCase.Execute(Request);
+                return Ok();
+            }
+            catch (Exception ex) 
+            {
+                return StatusCode(500, "Internal server error");
+            }
+                    
         }
     }
 }
