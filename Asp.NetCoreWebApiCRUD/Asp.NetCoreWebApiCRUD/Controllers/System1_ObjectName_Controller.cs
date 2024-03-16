@@ -13,12 +13,11 @@ namespace Asp.NetCoreWebApiCRUD.Controllers
     [ApiController]
     public class System1_ObjectName_Controller : ControllerBase
     {
-        private readonly Class1 class1 = new Class1();
         private readonly ICreateSytem1_ObjectName_UseCase _createSystem1_ObjectName1_UseCase;
 
         public System1_ObjectName_Controller(ICreateSytem1_ObjectName_UseCase createSystem1_ObjectName1_UseCase)
         {
-            _createSystem1_ObjectName1_UseCase = _createSystem1_ObjectName1_UseCase ?? throw new ArgumentNullException(nameof(createSystem1_ObjectName1_UseCase));
+            _createSystem1_ObjectName1_UseCase = createSystem1_ObjectName1_UseCase ?? throw new ArgumentNullException(nameof(createSystem1_ObjectName1_UseCase));
         }
 
         [HttpPost]
