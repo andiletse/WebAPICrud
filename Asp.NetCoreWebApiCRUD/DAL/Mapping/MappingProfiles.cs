@@ -11,7 +11,7 @@ namespace DAL.Mapping
         public MappingProfiles()
         {
             CreateMap<System1_EntityName1, System1_ObjectName>();
-            CreateMap<System1_ObjectName, System1_EntityName1>();
+           CreateMap<System1_ObjectName, System1_EntityName1>();
         }
     }
 }

@@ -19,15 +19,14 @@ namespace BAL.UseCases
         {
             var system1_D1 = new System1_ObjectName
             {
-                
+
                 propertyName1 = request.propertyName1,
                 propertyName2 = request.propertyName2,
                 propertyName3 = request.propertyName3,
+                propertyName4 = request.propertyName4,
                 CreatedOn = DateTime.Now
             };
             _system1ObjectName_Repository.Create(system1_D1);
-        }
-
-
+        }        
     }
 }

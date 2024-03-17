@@ -42,6 +42,7 @@ namespace Asp.NetCoreWebApiCRUD
         private void RepositoryServices(IServiceCollection services)
         {
             services.AddScoped<ISystem1_ObjectName_Repository, RepositorySystem1_ObjectName_>();
+           
         }
 
         private void UseCaseServices(IServiceCollection services)

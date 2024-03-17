@@ -7,6 +7,7 @@ namespace BAL.Requests
         public string propertyName1 { get; set; }
         public string propertyName2 { get; set; }
         public string propertyName3 { get; set; }
-       
+        public string propertyName4 { get; set; }
+
     }
 }

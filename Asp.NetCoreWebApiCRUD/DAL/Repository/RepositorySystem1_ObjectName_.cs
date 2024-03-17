@@ -33,12 +33,12 @@ namespace DAL.Repository
             _context.SaveChanges();           
         }
 
-        public System1_ObjectName GetById(int Id)
-        {
-            // Execute the query using Entity Framework Core
-            var system1PropertiesThatAreFoundWithIdProvided = _context.System1_TableName1.FirstOrDefault(p => p.Id == Id);
-            return _mapper.Map<System1_ObjectName>(system1PropertiesThatAreFoundWithIdProvided);
+        //public System1_ObjectName GetById(int Id)
+        //{
+        //    // Execute the query using Entity Framework Core
+        //    var system1PropertiesThatAreFoundWithIdProvided = _context.System1_TableName1.FirstOrDefault(p => p.Id == Id);
+        //    return _mapper.Map<System1_EntityName1>(system1PropertiesThatAreFoundWithIdProvided);
            
-        }
+        //}
     }
 }

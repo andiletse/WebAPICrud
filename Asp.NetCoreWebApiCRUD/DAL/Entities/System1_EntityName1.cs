@@ -8,6 +8,7 @@ namespace DAL.Entities
         public string propertyName1 { get; set; }
         public string propertyName2 { get; set; }
         public string propertyName3 { get; set; }
+        public string propertyName4 { get; set; }
         public DateTime CreatedOn { get; set; }
         public bool IsDeleted { get; set; } = false;
     }
